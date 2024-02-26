@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
+  <title>Virus Slayer</title>
+</head>
+<body>
+  <div class="container">
+    <div class="game">
+      <section id="home">
+        <div class="title">
+          <img src="./img/icon.png" alt="icon" width="150">
+          <div>Virus Slayer</div>
+        </div>
+        <div class="instruction">
+          <div>Game Instruction</div>
+          <br>
+          <ol>
+            <li>Input username and click play</li>
+            <li>Destroy virus with DFJK key</li>
+            <li>Reach high score</li>
+            <li>Enjoy the game!</li>
+          </ol>
+        </div>
+        <div class="user-form">
+          <input type="text" id="username" placeholder="Input username">
+          <button type="button" id="btnSubmit" disabled>Play</button>
+        </div>
+      </section>
+      <section id="countdown">
+        <div class="countTime"></div>
+      </section>
+      <section id="pause">
+        <div class="pauseUI">
+          <div>Game paused!</div>
+          <div class="btn-group">
+            <button class="restart" onclick="window.location.reload()">Restart</button>
+            <button class="continue">Continue</button>
+          </div>
+        </div>
+      </section>
+      <section id="gameOver">
+        <div class="gameOverUI">
+          <div>Game over!</div>
+          <div class="result">
+            <p>Player: <span id="playerRes"></span></p>
+            <p>Time: <span id="timeRes"></span></p>
+            <p>Score: <span id="scoreRes"></span></p>
+          </div>
+          <button class="restart" onclick="window.location.reload()">Restart</button>
+        </div>
+      </section>
+      <section id="gameplay">
+        <div id="board">
+          <div class="danger-area"></div>
+          <div class="peluru" id="dArea"></div>
+          <div class="peluru" id="fArea"></div>
+          <div class="peluru" id="jArea"></div>
+          <div class="peluru" id="kArea"></div>
+          <div class="border"></div>
+          <div class="board board-d">
+            <div class="btn btn-d">D</div>
+          </div>
+          <div class="board board-f">
+            <div class="btn btn-f">F</div>
+          </div>
+          <div class="board board-j">
+            <div class="btn btn-j">J</div>
+          </div>
+          <div class="board board-k">
+            <div class="btn btn-k">K</div>
+          </div>
+        </div>
+        <div id="statistic">
+          <div class="stats">Player: <span id="player">Bevann</span></div>
+          <div class="stats">Time: <span id="time">00:00</span></div>
+          <div class="stats">Score: <span id="score">0</span></div>
+          <div class="stats">Fail: <span id="fail">0</span></div>
+          <div id="hint">>> Press ESC to pause game</div>
+        </div>
+      </section>
+    </div>
+  </div>
+  
+  <script src="./script.js"></script>
+</body>
+</html>
